@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted box shadow */
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 30px; /* Added margin to increase spacing */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Ensure no margin on the last item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+}
+
+.auth-buttons .login {
+    background-color: #FF7222;
+    color: #fff;
+}
+
+.auth-buttons .signup {
+    background-color: #333;
+    color: #fff;
+}
+
+.showcase {
+    background-color: #FFF;
+    padding: 80px 0;
+}
+
+.showcase .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 500px;
+    margin-top: -80px;
+}
+
+.form-section .password {
+    display: flex;
+    color: grey;
+    justify-content: space-between;
+}
+
+.form-section .password a {
+    color: grey;
+}
+
+.form-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #582FFB, #FF4DCD, #FC974E); /* Blue to light purple gradient */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow effect */
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section input,
+.form-section button {
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box; /* Ensure inputs and button take full width */
+}
+
+.form-section input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-section button {
+    background-color: #FF7222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: auto; /* Set width to auto */
+    padding: 10px 20px; /* Control button size with padding */
+    align-self: flex-start;
+}
+
+.showcase-image {
+    flex: 1;
+    text-align: center;
+}
+
+.showcase-image img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 100px;
+}
+
+footer {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    color: #172048;
+}
+
+.footer-links .quick-links,
+.footer-links .contact-info {
+    width: 45%;
+}
+
+.footer-links .quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links .quick-links ul li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.footer-links .quick-links ul li a {
+    text-decoration: none;
+    color: #000;
+    color: #172048;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-media a img {
+    max-width: 40%;
+    height: auto;
+}

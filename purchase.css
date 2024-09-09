@@ -1,0 +1,356 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted box shadow */
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo img {
+    width: 150px;
+    animation: zoomIn 2s ease-in-out;
+}
+
+a, button {
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 30px; /* Added margin to increase spacing */
+    display: inline-block;
+    font-size: 18px;
+    animation: slideInUp 1.5s ease-in-out;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Ensure no margin on the last item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+.auth-buttons button:hover {
+    transform: scale(1.1);
+    background-color: #3498db;
+}
+.auth-buttons .login,
+.auth-buttons .signup {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+}
+
+.auth-buttons .login {
+    background-color: #FF7222;
+    color: #fff;
+}
+
+.auth-buttons .signup {
+    background-color: #333;
+    color: #fff;
+}
+
+.showcase {
+    background-color: #FFF;
+    padding: 80px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.showcase .showcase-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.showcase .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.showcase-content .form-section h1 {
+    animation: zoomIn 1.5s ease-in-out;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 500px;
+    margin-top: -80px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideInUp 2s ease-in-out;
+}
+
+.form-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #582FFB, #FF4DCD, #FC974E); /* Blue to light purple gradient */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow effect */
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section input,
+.form-section button {
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box; /* Ensure inputs and button take full width */
+}
+
+.form-section input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-section button {
+    background-color: #FF7222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: auto; /* Set width to auto */
+    padding: 10px 20px; /* Control button size with padding */
+    align-self: flex-start;
+}
+
+form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:hover {
+    box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
+}
+
+form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(46, 204, 113, 0.5);
+}
+
+.showcase-image {
+    flex: 1;
+    text-align: center;
+}
+
+.showcase-image img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 100px;
+    animation: zoomIn 3s ease-in-out;
+}
+
+footer {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    color: #172048;
+}
+
+.footer-links .quick-links,
+.footer-links .contact-info {
+    width: 45%;
+}
+
+.footer-links .quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links .quick-links ul li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+footer .social-media a {
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .social-media a:hover {
+    transform: rotate(360deg);
+}
+
+footer .quick-links ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+footer .quick-links ul li a:hover {
+    color: #3498db;
+}
+
+footer .contact-info {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.footer-links .quick-links ul li a {
+    text-decoration: none;
+    color: #000;
+    color: #172048;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-media a img {
+    max-width: 40%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .showcase-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-section, .showcase-image {
+        margin: 20px 0;
+    }
+}

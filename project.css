@@ -1,0 +1,505 @@
+/* styles.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: -8px 0;
+    background: #fff;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+a, button {
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover, button:hover {
+    transform: scale(1.05);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-buttons .login i,
+.auth-buttons .signup i {
+    margin-left: 8px; /* Space between text and icon */
+    font-size: 0.9em;  /* Adjust size if needed */
+}
+
+.auth-buttons .login {
+    background-color: #FF7222;
+    color: #fff;
+    border-radius: 18px;
+}
+
+.auth-buttons .signup {
+    background-color: #333;
+    color: #fff;
+    border-radius: 18px;
+}
+
+.showcase {
+    background-color: #f5f5f5;
+    padding: 100px 0;
+}
+
+.showcase .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.showcase-text {
+    flex: 1;
+    padding-right: 40px;
+    animation:  fadeIn 2s ease-out;
+}
+
+.showcase-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #582FFB, #FF4DCD, #FC974E); /* Blue to light purple gradient */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow effect */
+}
+
+
+.showcase-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.showcase-text .cta-button {
+    padding: 15px 30px;
+    background-color: #FF7222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.showcase-image {
+    flex: 1;
+    padding-left: 60px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.showcase-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.feature-box {
+    width: 25%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px; 
+    box-sizing: border-box;
+    min-height: 350px;
+    animation: fadeInUp 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box img.feature-icon {
+    width: 50px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-right: 30px;;
+}
+
+.feature-box ul {
+    padding: 0;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.feature-box ul li {
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.how-it-works {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.how-it-works .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.how-it-works h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #582FFB, #FF4DCD, #FC974E); /* Blue to light purple gradient */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    text-align: center; /* Center the heading */
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center; /* Center the steps */
+}
+
+.step {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between;
+    width: 90%; /* Increased width to occupy more space */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 100px;
+}
+
+.step-image {
+    width: 40%; /* Increased width to fit alongside content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.step:nth-child(odd) .step-image {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.step:nth-child(even) .step-image {
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 55%; /* Increased width to fit alongside image */
+    padding-left: 20px; /* Space between image and content */
+    background-color: transparent; /* Remove background color */
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.step-content h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.step-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+}
+
+.step-content ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1em; /* Adjust font size as needed */
+    color: #333; /* Default text color */
+}
+
+.step-content ul li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FF7222; /* Color for the tick icon */
+    font-size: 0.8rem; /* Adjust icon size as needed */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+.step-content .purchase-now, .step-content .join-merchant {
+    background-color: #FF7222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.step-content .purchase-now:hover, .step-content .join-merchant:hover {
+    background-color: #e04343;
+}
+
+.step-content .purchase-now {
+    align-self: flex-start;
+}
+
+.step-content .join-merchant {
+    align-self: flex-start;
+}
+
+
+.testimonials {
+    background: #FFF;
+    padding: 50px 0;
+}
+
+.testimonials .container .testimonialy h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #582FFB, #FF4DCD, #FC974E); /* Blue to light purple gradient */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow effect */
+}
+
+.testimonialy {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.testimonialy h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.testimonialy p.black {
+    font-size: 1.2em;
+    width: 60%; /* Adjust this value to control the width */
+    margin-top: 0; /* Ensure there's no extra margin at the top */
+    margin-bottom: 0;
+    line-height: 1.5em;
+    color: grey;
+}
+
+
+.testimonials .container .testimonialy {
+    padding-bottom: 80px;
+}
+
+
+.testimonials .testimonial-slider {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial-slider .testimonial img {
+    width: 40px;
+    border-radius: 50px;
+}
+
+.testimonial-slider .testimonial .black {
+    color: #333;
+    font-weight: 400;
+}
+
+.testimonial {
+    animation: fadeInUp 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonials .testimonial {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+    color: gold; /* Actual star color */
+    margin-bottom: 10px;
+}
+
+.stars i {
+    margin-right: 2px; /* Adjust spacing between stars if needed */
+}
+
+footer {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    color: #172048;
+}
+
+.footer-links .quick-links,
+.footer-links .contact-info {
+    width: 45%;
+}
+
+.footer-links .quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links .quick-links ul li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.footer-links .quick-links ul li a {
+    text-decoration: none;
+    color: #000;
+    color: #172048;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-media a img {
+    width: 50px;
+}
+.social-media a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+}
+
+.cta-button, .purchase-now, .join-merchant {
+    transition: background-color 0.3s ease-out, transform 0.3s ease-in;
+}
+
+.cta-button:hover, .purchase-now:hover, .join-merchant:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
